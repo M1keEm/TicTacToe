@@ -29,7 +29,7 @@
          </size>
         </property>
         <property name="text">
-         <string>6</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="zasoby.qrc">
@@ -52,7 +52,7 @@
          </size>
         </property>
         <property name="text">
-         <string>2</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="zasoby.qrc">
@@ -75,7 +75,7 @@
          </size>
         </property>
         <property name="text">
-         <string>3</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="zasoby.qrc">
@@ -107,7 +107,7 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>1</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="zasoby.qrc">
@@ -136,7 +136,7 @@
          </size>
         </property>
         <property name="text">
-         <string>8</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="zasoby.qrc">
@@ -159,7 +159,7 @@
          </size>
         </property>
         <property name="text">
-         <string>7</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="zasoby.qrc">
@@ -182,7 +182,7 @@
          </size>
         </property>
         <property name="text">
-         <string>4</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="zasoby.qrc">
@@ -205,7 +205,7 @@
          </size>
         </property>
         <property name="text">
-         <string>9</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="zasoby.qrc">
@@ -234,7 +234,7 @@
          </size>
         </property>
         <property name="text">
-         <string>5</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="zasoby.qrc">

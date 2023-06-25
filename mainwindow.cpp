@@ -22,8 +22,6 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(ui->P8, SIGNAL(clicked()), SLOT(clicked()));
     QObject::connect(ui->P9, SIGNAL(clicked()), SLOT(clicked()));
     QObject::connect(ui->newGame, SIGNAL(clicked()), this, SLOT(newGame()));
-
-
 }
 
 MainWindow::~MainWindow()
@@ -35,8 +33,8 @@ void MainWindow::clicked()
 {
     QObject* button = QObject::sender();
     QString help = button->objectName();
+    QString name = help;
     help.remove("P");
-    qDebug() << "Printing info: " << help;
     int index = help.toInt();
     if(data_tab[index-1]==0){
         QString iconPath;
@@ -55,7 +53,27 @@ void MainWindow::clicked()
 
         QIcon icon(iconPath);
         QPixmap pixmap(pixmapPath);
-        ui->P1->setIcon(icon);
+        if(name == "P1"){
+            ui->P1->setIcon(icon);
+        }else if(name == "P2"){
+            ui->P2->setIcon(icon);
+        }else if(name == "P2"){
+            ui->P2->setIcon(icon);
+        }else if(name == "P3"){
+            ui->P3->setIcon(icon);
+        }else if(name == "P4"){
+            ui->P4->setIcon(icon);
+        }else if(name == "P5"){
+            ui->P5->setIcon(icon);
+        }else if(name == "P6"){
+            ui->P6->setIcon(icon);
+        }else if(name == "P7"){
+            ui->P7->setIcon(icon);
+        }else if(name == "P8"){
+            ui->P8->setIcon(icon);
+        }else{
+            ui->P9->setIcon(icon);
+        }
         if(isWin()==1){
             QString winInfo;
             if(currentPlayer == 1){
@@ -64,6 +82,7 @@ void MainWindow::clicked()
                 winInfo = "Gracz 1 wygrywa!";
             }
             QMessageBox::information(this, "Koniec Gry ", winInfo);
+            newGame();
         }
         ui->playerIcon->setPixmap(pixmap);
     }
@@ -102,303 +121,4 @@ int MainWindow::isWin()
     }
     return 0;
 }
-
-void MainWindow::P1_clicked()
-{
-    if(data_tab[0]==0){
-        QString iconPath;
-        QString pixmapPath;
-        if (currentPlayer == 1) {
-            iconPath = ":/img/img/x.bmp";
-            pixmapPath = ":/img/img/osmall.bmp";
-            data_tab[0] = currentPlayer;
-            currentPlayer = 2;
-        } else {
-            iconPath = ":/img/img/o.bmp";
-            pixmapPath = ":/img/img/xsmall.bmp";
-            data_tab[0] = currentPlayer;
-            currentPlayer = 1;
-        }
-
-        QIcon icon(iconPath);
-        QPixmap pixmap(pixmapPath);
-        ui->P1->setIcon(icon);
-        if(isWin()==1){
-            QString winInfo;
-            if(currentPlayer == 1){
-                winInfo = "Gracz 2 wygrywa!";
-            }else{
-                winInfo = "Gracz 1 wygrywa!";
-            }
-            QMessageBox::information(this, "Koniec Gry ", winInfo);
-        }
-        ui->playerIcon->setPixmap(pixmap);
-    }
-}
-
-void MainWindow::P2_clicked()
-{
-    if(data_tab[1]==0){
-        QString iconPath;
-        QString pixmapPath;
-        if (currentPlayer == 1) {
-            iconPath = ":/img/img/x.bmp";
-            pixmapPath = ":/img/img/osmall.bmp";
-            data_tab[1] = currentPlayer;
-            currentPlayer = 2;
-        } else {
-            iconPath = ":/img/img/o.bmp";
-            pixmapPath = ":/img/img/xsmall.bmp";
-            data_tab[1] = currentPlayer;
-            currentPlayer = 1;
-        }
-
-        QIcon icon(iconPath);
-        QPixmap pixmap(pixmapPath);
-        ui->P2->setIcon(icon);
-        if(isWin()==1){
-            QString winInfo;
-            if(currentPlayer == 1){
-                winInfo = "Gracz 2 wygrywa!";
-            }else{
-                winInfo = "Gracz 1 wygrywa!";
-            }
-            QMessageBox::information(this, "Koniec Gry ", winInfo);
-        }
-        ui->playerIcon->setPixmap(pixmap);
-    }
-}
-
-void MainWindow::P3_clicked()
-{
-    if(data_tab[2]==0){
-        QString iconPath;
-        QString pixmapPath;
-        if (currentPlayer == 1) {
-            iconPath = ":/img/img/x.bmp";
-            pixmapPath = ":/img/img/osmall.bmp";
-            data_tab[2] = currentPlayer;
-            currentPlayer = 2;
-        } else {
-            iconPath = ":/img/img/o.bmp";
-            pixmapPath = ":/img/img/xsmall.bmp";
-            data_tab[2] = currentPlayer;
-            currentPlayer = 1;
-        }
-
-        QIcon icon(iconPath);
-        QPixmap pixmap(pixmapPath);
-        ui->P3->setIcon(icon);
-        if(isWin()==1){
-            QString winInfo;
-            if(currentPlayer == 1){
-                winInfo = "Gracz 2 wygrywa!";
-            }else{
-                winInfo = "Gracz 1 wygrywa!";
-            }
-            QMessageBox::information(this, "Koniec Gry ", winInfo);
-        }
-        ui->playerIcon->setPixmap(pixmap);
-    }
-}
-
-void MainWindow::P4_clicked()
-{
-    if(data_tab[3]==0){
-        QString iconPath;
-        QString pixmapPath;
-        if (currentPlayer == 1) {
-            iconPath = ":/img/img/x.bmp";
-            pixmapPath = ":/img/img/osmall.bmp";
-            data_tab[3] = currentPlayer;
-            currentPlayer = 2;
-        } else {
-            iconPath = ":/img/img/o.bmp";
-            pixmapPath = ":/img/img/xsmall.bmp";
-            data_tab[3] = currentPlayer;
-            currentPlayer = 1;
-        }
-
-        QIcon icon(iconPath);
-        QPixmap pixmap(pixmapPath);
-        ui->P4->setIcon(icon);
-        if(isWin()==1){
-            QString winInfo;
-            if(currentPlayer == 1){
-                winInfo = "Gracz 2 wygrywa!";
-            }else{
-                winInfo = "Gracz 1 wygrywa!";
-            }
-            QMessageBox::information(this, "Koniec Gry ", winInfo);
-        }
-        ui->playerIcon->setPixmap(pixmap);
-    }
-}
-
-void MainWindow::P5_clicked()
-{
-    if(data_tab[4]==0){
-        QString iconPath;
-        QString pixmapPath;
-        if (currentPlayer == 1) {
-            iconPath = ":/img/img/x.bmp";
-            pixmapPath = ":/img/img/osmall.bmp";
-            data_tab[4] = currentPlayer;
-            currentPlayer = 2;
-        } else {
-            iconPath = ":/img/img/o.bmp";
-            pixmapPath = ":/img/img/xsmall.bmp";
-            data_tab[4] = currentPlayer;
-            currentPlayer = 1;
-        }
-
-        QIcon icon(iconPath);
-        QPixmap pixmap(pixmapPath);
-        ui->P5->setIcon(icon);
-        if(isWin()==1){
-            QString winInfo;
-            if(currentPlayer == 1){
-                winInfo = "Gracz 2 wygrywa!";
-            }else{
-                winInfo = "Gracz 1 wygrywa!";
-            }
-            QMessageBox::information(this, "Koniec Gry ", winInfo);
-        }
-        ui->playerIcon->setPixmap(pixmap);
-    }
-}
-
-void MainWindow::P6_clicked()
-{
-    if(data_tab[5]==0){
-        QString iconPath;
-        QString pixmapPath;
-        if (currentPlayer == 1) {
-            iconPath = ":/img/img/x.bmp";
-            pixmapPath = ":/img/img/osmall.bmp";
-            data_tab[5] = currentPlayer;
-            currentPlayer = 2;
-        } else {
-            iconPath = ":/img/img/o.bmp";
-            pixmapPath = ":/img/img/xsmall.bmp";
-            data_tab[5] = currentPlayer;
-            currentPlayer = 1;
-        }
-
-        QIcon icon(iconPath);
-        QPixmap pixmap(pixmapPath);
-        ui->P6->setIcon(icon);
-        if(isWin()==1){
-            QString winInfo;
-            if(currentPlayer == 1){
-                winInfo = "Gracz 2 wygrywa!";
-            }else{
-                winInfo = "Gracz 1 wygrywa!";
-            }
-            QMessageBox::information(this, "Koniec Gry ", winInfo);
-        }
-        ui->playerIcon->setPixmap(pixmap);
-    }
-}
-
-void MainWindow::P7_clicked()
-{
-    if(data_tab[6]==0){
-        QString iconPath;
-        QString pixmapPath;
-        if (currentPlayer == 1) {
-            iconPath = ":/img/img/x.bmp";
-            pixmapPath = ":/img/img/osmall.bmp";
-            data_tab[6] = currentPlayer;
-            currentPlayer = 2;
-        } else {
-            iconPath = ":/img/img/o.bmp";
-            pixmapPath = ":/img/img/xsmall.bmp";
-            data_tab[6] = currentPlayer;
-            currentPlayer = 1;
-        }
-
-        QIcon icon(iconPath);
-        QPixmap pixmap(pixmapPath);
-        ui->P7->setIcon(icon);
-        if(isWin()==1){
-            QString winInfo;
-            if(currentPlayer == 1){
-                winInfo = "Gracz 2 wygrywa!";
-            }else{
-                winInfo = "Gracz 1 wygrywa!";
-            }
-            QMessageBox::information(this, "Koniec Gry ", winInfo);
-        }
-        ui->playerIcon->setPixmap(pixmap);
-    }
-}
-
-void MainWindow::P8_clicked()
-{
-    if(data_tab[7]==0){
-        QString iconPath;
-        QString pixmapPath;
-        if (currentPlayer == 1) {
-            iconPath = ":/img/img/x.bmp";
-            pixmapPath = ":/img/img/osmall.bmp";
-            data_tab[7] = currentPlayer;
-            currentPlayer = 2;
-        } else {
-            iconPath = ":/img/img/o.bmp";
-            pixmapPath = ":/img/img/xsmall.bmp";
-            data_tab[7] = currentPlayer;
-            currentPlayer = 1;
-        }
-
-        QIcon icon(iconPath);
-        QPixmap pixmap(pixmapPath);
-        ui->P8->setIcon(icon);
-        if(isWin()==1){
-            QString winInfo;
-            if(currentPlayer == 1){
-                winInfo = "Gracz 2 wygrywa!";
-            }else{
-                winInfo = "Gracz 1 wygrywa!";
-            }
-            QMessageBox::information(this, "Koniec Gry ", winInfo);
-        }
-        ui->playerIcon->setPixmap(pixmap);
-    }
-}
-
-void MainWindow::P9_clicked()
-{
-    if(data_tab[8]==0){
-        QString iconPath;
-        QString pixmapPath;
-        if (currentPlayer == 1) {
-            iconPath = ":/img/img/x.bmp";
-            pixmapPath = ":/img/img/osmall.bmp";
-            data_tab[8] = currentPlayer;
-            currentPlayer = 2;
-        } else {
-            iconPath = ":/img/img/o.bmp";
-            pixmapPath = ":/img/img/xsmall.bmp";
-            data_tab[8] = currentPlayer;
-            currentPlayer = 1;
-        }
-
-        QIcon icon(iconPath);
-        QPixmap pixmap(pixmapPath);
-        ui->P9->setIcon(icon);
-        if(isWin()==1){
-            QString winInfo;
-            if(currentPlayer == 1){
-                winInfo = "Gracz 2 wygrywa!";
-            }else{
-                winInfo = "Gracz 1 wygrywa!";
-            }
-            QMessageBox::information(this, "Koniec Gry ", winInfo);
-        }
-        ui->playerIcon->setPixmap(pixmap);
-    }
-}
-
-
 
