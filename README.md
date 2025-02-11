@@ -54,7 +54,7 @@ To run the Tic Tac Toe game, follow these steps:
 
 3. **Navigate to the project directory:**
    ```bash
-   cd tic-tac-toe-qt
+   cd tictactoe
    
 4. **Open the project in Qt Creator:**
    Launch Qt Creator and open the CMakeLists.txt or .pro file (if available).
