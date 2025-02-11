@@ -50,11 +50,11 @@ To run the Tic Tac Toe game, follow these steps:
 
 2. **Clone the repository:**
    ```bash
-   git clone https://github.com/m1keem/tictactoe.git
+   git clone https://github.com/M1keEm/TicTacToe.git
 
 3. **Navigate to the project directory:**
    ```bash
-   cd tictactoe
+   cd TicTacToe
    
 4. **Open the project in Qt Creator:**
    Launch Qt Creator and open the CMakeLists.txt or .pro file (if available).
