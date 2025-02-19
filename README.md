@@ -37,7 +37,7 @@ A classic Tic Tac Toe game implemented using the Qt framework. This application 
 *Game in progress with Player 1 (X) and Player 2 (O).*
 
 ![Screenshot 2](screenshots/screenshot2.png)  
-*Game over with a win condition for Player 2 (O).*
+*Game over with a win condition for Player 1 (X).*
 
 ---
 
